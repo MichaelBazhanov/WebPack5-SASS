@@ -1,0 +1,36 @@
+$red: red;
+$yellow: yellow;
+$blue: blue;
+
+
+html {
+	font-family: generalFont;
+}
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.react {
+  width: 100px;
+  height: 100px;
+  .img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../asset/images/Polymer.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+img {
+	width: 100%;
+	height: auto;
+}
