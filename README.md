@@ -1,49 +1,73 @@
-**Note: This project is deprecated.** It was never a very good starter for real projects since you don't want your CSS framework to dictate your starter webpack setup — better to use vue-cli, create-react-app, etc.
+# Webpack template SCSS v.1
 
-We recommend using the [tailwindcss/playground](https://github.com/tailwindcss/playground) starter if you just want a simple project for playing around with Tailwind and PostCSS.
+Basic configuration of Webpack.
 
----
+## Technologies
 
-# Tailwind CSS Webpack Starter Project
+		"name": "webpack5",
+		"version": "1.0.0",
+		"description": "",
+		"main": "index.js",
+		"scripts": {
+		"start": "set NODE_ENV=development&&webpack serve",
+		"dev": "set NODE_ENV=development&&webpack",
+		"build": "set NODE_ENV=production&&webpack"
+		},
+		"keywords": [],
+		"author": "",
+		"license": "ISC",
+		"devDependencies": {
+		"@babel/core": "^7.17.8",
+		"@babel/preset-env": "^7.16.11",
+		"babel-loader": "^8.2.4",
+		"css-loader": "^6.7.1",
+		"favicons": "^6.2.2",
+		"favicons-webpack-plugin": "^5.0.2",
+		"html-loader": "^3.1.0",
+		"html-webpack-plugin": "^5.5.0",
+		"mini-css-extract-plugin": "^2.6.0",
+		"postcss": "^8.4.12",
+		"postcss-loader": "^6.2.1",
+		"postcss-preset-env": "^7.4.3",
+		"sass": "^1.49.9",
+		"sass-loader": "^12.6.0",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.70.0",
+		"webpack-cli": "^4.9.2",
+		"webpack-dev-server": "^4.7.4"
+		},
+		"browserslist": "> 0.25%, not dead",
+		"dependencies": {
+		"jquery": "^3.6.0"
+		}
 
-This is an example of a super simple Webpack setup for using [Tailwind CSS](https://tailwindcss.com).
+## Start using for a new project
 
-To get started, clone the project and install the dependencies:
+Clone the repo
+Run npm i to install dependencies
+Run commands in terminal:
+
+Development Server
 
 ```
-# Using npm
-npm install
-
-# Using Yarn
-yarn
+npm start
 ```
 
-After that, start up Webpack Development Server:
+Production Build
+
+```
+npm run build
+```
+
+Development mode
 
 ```
 npm run dev
 ```
 
-Webpack Development Server will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
-
-You can play around with `/index.html` to see the effects of your changes.
-
-To build a production bundle run:
-
 ```
-npm run prod
+1. npm i -D babel-loader @babel/core @babel/preset-env webpack webpack-cli webpack-dev-server
+2. npm i -D style-loader css-loader postcss-loader postcss postcss-preset-env sass-loader sass mini-css-extract-plugin
+3. npm i jquery
+4. npm install --save-dev favicons favicons-webpack-plugin
 ```
-
-After that you will have a ready to deploy bundle at `/dist`
-
-## Contributing
-
-Have a lot of experience with Webpack and suggestions on how we could improve this starter template? We'd love a PR!
-
-
-
-1) npm i -D babel-loader @babel/core @babel/preset-env webpack webpack-cli webpack-dev-server
-2) npm i -D style-loader css-loader postcss-loader postcss postcss-preset-env sass-loader sass mini-css-extract-plugin
-3) npm i jquery
-4) npm install --save-dev favicons favicons-webpack-plugin
-
